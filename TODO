@@ -1,0 +1,55 @@
+TODO List for the grid cellular automaton project
+
+DONE symbol = #
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+24/06/2023 : The writePopulationtoFile() function appends the total populations in reverse order, i.e. latest update is written at the top of the file.
+      - Reverse the order of appending. (25/06/2023)#
+      
+24/06/2023 : The different update functions were not immplementing the Neumann neighborhood correctly.
+      - Sample all units for every combinations
+      for the ranges (i-1, i+1) and (j-1, j+1). (25/06/2023) #
+
+26/06/2023 : The systematic measurement of variance for different window sizes does not function correctly for now.
+      - Debug the counting within the windows and 
+      the measurement of the variance with a calculator. (26/06/2023) #
+
+28/06/2023 : Prey units on the border of the grid, i = 0 or j = 0, seem to not be updated.
+	- Find the origin of this bug. (01/07/2023) #
+
+01/07/2023 : Create a file to enable the exploration of the parameter space, i.e. multiple parameters with a range of value.
+	- the wrapper.c functions for integer parameter values (04/07/2023) #
+
+04/07/2023 : Enable support for parameter with floating values on the wrapper.
+	- Pretty simple fix after all. (12/07/2023) #
+	
+04/07/2023 : Create functions to enable new types of initial conditions. With different proportion of initial numbers of prey and predator and different spatial configurations.
+	- The generateGridRandom() function has been updated to allow for two parameters AGENTSDENSITY and PREYRATIO controlling, respectively, the proportion of occupied cells on the lattice, and the predator/prey ratio among these occupied cells. (12/07/2023) #
+
+13/07/2023 : Write a function in analysis.h to compute the temporal autocorrelation for a population dynamics time series. Combined with different window sizes, it should permit to see the increase in determinism or the decrease in chaos towards higher window sizes.
+        - The prototype autocorrPrototyp.c performs all the above correctly, and the code to produce a graphical display is already developed. (23/09/2023) #
+
+
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+23/09/2023 : Integrate the autocorrPrototype.c file as a method of the analysis.h header file to be used and tuned on from the parameters.h file.
+        - Almost done, need to enable the tuning from the parameters.h file, which is not functional for now. (26/02/2024) #
+	
+26/02/2024 : Enable the autocorrelation measure for different window sizes.
+	- 
+        
+17/09/2023 : Develop a functionality to save results of one or multiple similar simulations in a seperate, newly created folder.
+	- 
+
+12/07/2023 : Once the cellular automaton's parameter space is ready to be explored, integrate the existing wrapper prototype to be used in the main program.
+	-
+
+
+
+
+
